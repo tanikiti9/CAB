@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CAB学習ロードマップ</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="titleblock">
+      <p class="eyebrow">WebCAB 対策</p>
+      <h1>学習ロードマップ</h1>
+    </div>
+    <div class="countdown" aria-live="polite">
+      <div class="countdown-figure">
+        <span class="countdown-number" id="daysLeft">--</span>
+        <span class="countdown-unit" id="daysUnit">日</span>
+      </div>
+      <div class="countdown-caption">試験日まで</div>
+      <div class="countdown-date" id="examDateLabel"></div>
+      <div class="countdown-track"><div class="countdown-fill" id="countdownFill"></div></div>
+      <button type="button" class="today-link" id="jumpTodayBtn">→ 今日の位置を見る</button>
+    </div>
+  </header>
+
+  <section class="timeline-section" aria-label="学習フェーズのタイムライン">
+    <h2>フェーズ</h2>
+    <div class="timeline" id="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-segments" id="segments"></div>
+      <div class="timeline-logs" id="logDots"></div>
+      <div class="timeline-now" id="nowMarker">
+        <span class="now-stem"></span>
+        <span class="now-dot"></span>
+        <span class="now-label">今日<span class="now-date" id="nowDate"></span></span>
+      </div>
+      <div class="timeline-flags" id="flags"></div>
+    </div>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--accent)"></i>学習した日</span>
+      <span><i class="swatch" style="background:var(--accent)"></i>今日</span>
+      <span>フェーズをクリックすると詳細が下に表示されます</span>
+    </div>
+  </section>
+
+  <section class="detail-panel" id="detailPanel"></section>
+
+  <section class="heatmap-section" aria-label="学習カレンダー">
+    <h2>学習カレンダー</h2>
+    <div class="heatmap-scroll">
+      <div class="heatmap-months" id="heatmapMonths"></div>
+      <div class="heatmap-grid" id="heatmapGrid"></div>
+    </div>
+    <div class="heatmap-legend">
+      <span>学習なし</span>
+      <span class="heatmap-cell"></span>
+      <span class="heatmap-cell has-log"></span>
+      <span>学習した日</span>
+      <span style="margin-left:8px;">・今日は枠線で表示</span>
+    </div>
+  </section>
+
+  <section class="history-section">
+    <h2>学習履歴</h2>
+    <div class="filter-chips" id="filterChips"></div>
+    <ol class="history-list" id="historyList"></ol>
+  </section>
+
+  <p class="footnote">最終更新: <span id="lastUpdated"></span>(README.md の学習ログをもとに生成) — 学習ログが増えるたびに更新されます</p>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
