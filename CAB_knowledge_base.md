@@ -55,7 +55,7 @@
 - [subjects/命令表.md](./subjects/命令表.md)
 - [subjects/暗号.md](./subjects/暗号.md)
 
-学習の進捗・感想・気づきの時系列ログは [README.md](./README.md) にまとめている。
+学習の生ログ(日付・科目・学習内容・感想・メモ)は [STUDY_LOG.md](./STUDY_LOG.md)、それに対するAIの分析・レビューは [README.md](./README.md) にまとめている。
 
 ## 5. 性格検査(OPQ)について
 
