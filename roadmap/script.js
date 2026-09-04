@@ -30,6 +30,23 @@
     el.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "center" });
   }
 
+  document.getElementById("weaknessBasis").textContent = weaknessBasis;
+  var weaknessListEl = document.getElementById("weaknessList");
+  weaknesses.forEach(function (w) {
+    var li = document.createElement("li");
+    li.className = "weakness-item";
+    li.innerHTML =
+      '<span class="weakness-dot"></span>' +
+      '<div class="weakness-body">' +
+        '<span class="weakness-subject">' + w.subject + '</span>' +
+        '<span class="weakness-pattern">' + w.pattern + '</span>' +
+        '<span class="weakness-note">' + w.note + '</span>' +
+      '</div>';
+    weaknessListEl.appendChild(li);
+  });
+  document.getElementById("weaknessInsight").innerHTML = '<strong>共通パターン: </strong>' + weaknessInsight;
+  document.getElementById("weaknessMethod").textContent = weaknessMethodNote;
+
   var now = new Date();
   var today0 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   var exam0 = new Date(EXAM_DATE.getFullYear(), EXAM_DATE.getMonth(), EXAM_DATE.getDate());
